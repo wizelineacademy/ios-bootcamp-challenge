@@ -1,0 +1,646 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C36BFB582700DCCE00F8CCAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BFB572700DCCE00F8CCAC /* AppDelegate.swift */; };
+		C36BFB5A2700DCCE00F8CCAC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BFB592700DCCE00F8CCAC /* SceneDelegate.swift */; };
+		C36BFB5C2700DCCE00F8CCAC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BFB5B2700DCCE00F8CCAC /* ViewController.swift */; };
+		C36BFB5F2700DCCE00F8CCAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C36BFB5D2700DCCE00F8CCAC /* Main.storyboard */; };
+		C36BFB622700DCCE00F8CCAC /* iOS_Bootcamp_Challenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C36BFB602700DCCE00F8CCAC /* iOS_Bootcamp_Challenge.xcdatamodeld */; };
+		C36BFB642700DCD000F8CCAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C36BFB632700DCD000F8CCAC /* Assets.xcassets */; };
+		C36BFB672700DCD000F8CCAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C36BFB652700DCD000F8CCAC /* LaunchScreen.storyboard */; };
+		C36BFB722700DCD100F8CCAC /* iOS_Bootcamp_ChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BFB712700DCD100F8CCAC /* iOS_Bootcamp_ChallengeTests.swift */; };
+		C36BFB7C2700DCD100F8CCAC /* iOS_Bootcamp_ChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BFB7B2700DCD100F8CCAC /* iOS_Bootcamp_ChallengeUITests.swift */; };
+		C36BFB7E2700DCD100F8CCAC /* iOS_Bootcamp_ChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BFB7D2700DCD100F8CCAC /* iOS_Bootcamp_ChallengeUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C36BFB6E2700DCD100F8CCAC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C36BFB4C2700DCCE00F8CCAC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C36BFB532700DCCE00F8CCAC;
+			remoteInfo = "iOS Bootcamp Challenge";
+		};
+		C36BFB782700DCD100F8CCAC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C36BFB4C2700DCCE00F8CCAC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C36BFB532700DCCE00F8CCAC;
+			remoteInfo = "iOS Bootcamp Challenge";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C36BFB542700DCCE00F8CCAC /* iOS Bootcamp Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Bootcamp Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C36BFB572700DCCE00F8CCAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C36BFB592700DCCE00F8CCAC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C36BFB5B2700DCCE00F8CCAC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C36BFB5E2700DCCE00F8CCAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C36BFB612700DCCE00F8CCAC /* iOS_Bootcamp_Challenge.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iOS_Bootcamp_Challenge.xcdatamodel; sourceTree = "<group>"; };
+		C36BFB632700DCD000F8CCAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C36BFB662700DCD000F8CCAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C36BFB682700DCD000F8CCAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C36BFB6D2700DCD100F8CCAC /* iOS Bootcamp ChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS Bootcamp ChallengeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C36BFB712700DCD100F8CCAC /* iOS_Bootcamp_ChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_Bootcamp_ChallengeTests.swift; sourceTree = "<group>"; };
+		C36BFB772700DCD100F8CCAC /* iOS Bootcamp ChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS Bootcamp ChallengeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C36BFB7B2700DCD100F8CCAC /* iOS_Bootcamp_ChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_Bootcamp_ChallengeUITests.swift; sourceTree = "<group>"; };
+		C36BFB7D2700DCD100F8CCAC /* iOS_Bootcamp_ChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_Bootcamp_ChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C36BFB512700DCCE00F8CCAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C36BFB6A2700DCD100F8CCAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C36BFB742700DCD100F8CCAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C36BFB4B2700DCCE00F8CCAC = {
+			isa = PBXGroup;
+			children = (
+				C36BFB562700DCCE00F8CCAC /* iOS Bootcamp Challenge */,
+				C36BFB702700DCD100F8CCAC /* iOS Bootcamp ChallengeTests */,
+				C36BFB7A2700DCD100F8CCAC /* iOS Bootcamp ChallengeUITests */,
+				C36BFB552700DCCE00F8CCAC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C36BFB552700DCCE00F8CCAC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C36BFB542700DCCE00F8CCAC /* iOS Bootcamp Challenge.app */,
+				C36BFB6D2700DCD100F8CCAC /* iOS Bootcamp ChallengeTests.xctest */,
+				C36BFB772700DCD100F8CCAC /* iOS Bootcamp ChallengeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C36BFB562700DCCE00F8CCAC /* iOS Bootcamp Challenge */ = {
+			isa = PBXGroup;
+			children = (
+				C36BFB572700DCCE00F8CCAC /* AppDelegate.swift */,
+				C36BFB592700DCCE00F8CCAC /* SceneDelegate.swift */,
+				C36BFB5B2700DCCE00F8CCAC /* ViewController.swift */,
+				C36BFB5D2700DCCE00F8CCAC /* Main.storyboard */,
+				C36BFB632700DCD000F8CCAC /* Assets.xcassets */,
+				C36BFB652700DCD000F8CCAC /* LaunchScreen.storyboard */,
+				C36BFB682700DCD000F8CCAC /* Info.plist */,
+				C36BFB602700DCCE00F8CCAC /* iOS_Bootcamp_Challenge.xcdatamodeld */,
+			);
+			path = "iOS Bootcamp Challenge";
+			sourceTree = "<group>";
+		};
+		C36BFB702700DCD100F8CCAC /* iOS Bootcamp ChallengeTests */ = {
+			isa = PBXGroup;
+			children = (
+				C36BFB712700DCD100F8CCAC /* iOS_Bootcamp_ChallengeTests.swift */,
+			);
+			path = "iOS Bootcamp ChallengeTests";
+			sourceTree = "<group>";
+		};
+		C36BFB7A2700DCD100F8CCAC /* iOS Bootcamp ChallengeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C36BFB7B2700DCD100F8CCAC /* iOS_Bootcamp_ChallengeUITests.swift */,
+				C36BFB7D2700DCD100F8CCAC /* iOS_Bootcamp_ChallengeUITestsLaunchTests.swift */,
+			);
+			path = "iOS Bootcamp ChallengeUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C36BFB532700DCCE00F8CCAC /* iOS Bootcamp Challenge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C36BFB812700DCD100F8CCAC /* Build configuration list for PBXNativeTarget "iOS Bootcamp Challenge" */;
+			buildPhases = (
+				C36BFB502700DCCE00F8CCAC /* Sources */,
+				C36BFB512700DCCE00F8CCAC /* Frameworks */,
+				C36BFB522700DCCE00F8CCAC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "iOS Bootcamp Challenge";
+			productName = "iOS Bootcamp Challenge";
+			productReference = C36BFB542700DCCE00F8CCAC /* iOS Bootcamp Challenge.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C36BFB6C2700DCD100F8CCAC /* iOS Bootcamp ChallengeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C36BFB842700DCD100F8CCAC /* Build configuration list for PBXNativeTarget "iOS Bootcamp ChallengeTests" */;
+			buildPhases = (
+				C36BFB692700DCD100F8CCAC /* Sources */,
+				C36BFB6A2700DCD100F8CCAC /* Frameworks */,
+				C36BFB6B2700DCD100F8CCAC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C36BFB6F2700DCD100F8CCAC /* PBXTargetDependency */,
+			);
+			name = "iOS Bootcamp ChallengeTests";
+			productName = "iOS Bootcamp ChallengeTests";
+			productReference = C36BFB6D2700DCD100F8CCAC /* iOS Bootcamp ChallengeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C36BFB762700DCD100F8CCAC /* iOS Bootcamp ChallengeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C36BFB872700DCD100F8CCAC /* Build configuration list for PBXNativeTarget "iOS Bootcamp ChallengeUITests" */;
+			buildPhases = (
+				C36BFB732700DCD100F8CCAC /* Sources */,
+				C36BFB742700DCD100F8CCAC /* Frameworks */,
+				C36BFB752700DCD100F8CCAC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C36BFB792700DCD100F8CCAC /* PBXTargetDependency */,
+			);
+			name = "iOS Bootcamp ChallengeUITests";
+			productName = "iOS Bootcamp ChallengeUITests";
+			productReference = C36BFB772700DCD100F8CCAC /* iOS Bootcamp ChallengeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C36BFB4C2700DCCE00F8CCAC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					C36BFB532700DCCE00F8CCAC = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					C36BFB6C2700DCD100F8CCAC = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = C36BFB532700DCCE00F8CCAC;
+					};
+					C36BFB762700DCD100F8CCAC = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = C36BFB532700DCCE00F8CCAC;
+					};
+				};
+			};
+			buildConfigurationList = C36BFB4F2700DCCE00F8CCAC /* Build configuration list for PBXProject "iOS Bootcamp Challenge" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C36BFB4B2700DCCE00F8CCAC;
+			productRefGroup = C36BFB552700DCCE00F8CCAC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C36BFB532700DCCE00F8CCAC /* iOS Bootcamp Challenge */,
+				C36BFB6C2700DCD100F8CCAC /* iOS Bootcamp ChallengeTests */,
+				C36BFB762700DCD100F8CCAC /* iOS Bootcamp ChallengeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C36BFB522700DCCE00F8CCAC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C36BFB672700DCD000F8CCAC /* LaunchScreen.storyboard in Resources */,
+				C36BFB642700DCD000F8CCAC /* Assets.xcassets in Resources */,
+				C36BFB5F2700DCCE00F8CCAC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C36BFB6B2700DCD100F8CCAC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C36BFB752700DCD100F8CCAC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C36BFB502700DCCE00F8CCAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C36BFB622700DCCE00F8CCAC /* iOS_Bootcamp_Challenge.xcdatamodeld in Sources */,
+				C36BFB5C2700DCCE00F8CCAC /* ViewController.swift in Sources */,
+				C36BFB582700DCCE00F8CCAC /* AppDelegate.swift in Sources */,
+				C36BFB5A2700DCCE00F8CCAC /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C36BFB692700DCD100F8CCAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C36BFB722700DCD100F8CCAC /* iOS_Bootcamp_ChallengeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C36BFB732700DCD100F8CCAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C36BFB7C2700DCD100F8CCAC /* iOS_Bootcamp_ChallengeUITests.swift in Sources */,
+				C36BFB7E2700DCD100F8CCAC /* iOS_Bootcamp_ChallengeUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C36BFB6F2700DCD100F8CCAC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C36BFB532700DCCE00F8CCAC /* iOS Bootcamp Challenge */;
+			targetProxy = C36BFB6E2700DCD100F8CCAC /* PBXContainerItemProxy */;
+		};
+		C36BFB792700DCD100F8CCAC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C36BFB532700DCCE00F8CCAC /* iOS Bootcamp Challenge */;
+			targetProxy = C36BFB782700DCD100F8CCAC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C36BFB5D2700DCCE00F8CCAC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C36BFB5E2700DCCE00F8CCAC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C36BFB652700DCD000F8CCAC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C36BFB662700DCD000F8CCAC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C36BFB7F2700DCD100F8CCAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C36BFB802700DCD100F8CCAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C36BFB822700DCD100F8CCAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3Z9GKK4827;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS Bootcamp Challenge/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wizeline.bootcamp.iOS-Bootcamp-Challenge";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C36BFB832700DCD100F8CCAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3Z9GKK4827;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS Bootcamp Challenge/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wizeline.bootcamp.iOS-Bootcamp-Challenge";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C36BFB852700DCD100F8CCAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3Z9GKK4827;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wizeline.bootcamp.iOS-Bootcamp-ChallengeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS Bootcamp Challenge.app/iOS Bootcamp Challenge";
+			};
+			name = Debug;
+		};
+		C36BFB862700DCD100F8CCAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3Z9GKK4827;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wizeline.bootcamp.iOS-Bootcamp-ChallengeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS Bootcamp Challenge.app/iOS Bootcamp Challenge";
+			};
+			name = Release;
+		};
+		C36BFB882700DCD100F8CCAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3Z9GKK4827;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wizeline.bootcamp.iOS-Bootcamp-ChallengeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "iOS Bootcamp Challenge";
+			};
+			name = Debug;
+		};
+		C36BFB892700DCD100F8CCAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3Z9GKK4827;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wizeline.bootcamp.iOS-Bootcamp-ChallengeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "iOS Bootcamp Challenge";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C36BFB4F2700DCCE00F8CCAC /* Build configuration list for PBXProject "iOS Bootcamp Challenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C36BFB7F2700DCD100F8CCAC /* Debug */,
+				C36BFB802700DCD100F8CCAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C36BFB812700DCD100F8CCAC /* Build configuration list for PBXNativeTarget "iOS Bootcamp Challenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C36BFB822700DCD100F8CCAC /* Debug */,
+				C36BFB832700DCD100F8CCAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C36BFB842700DCD100F8CCAC /* Build configuration list for PBXNativeTarget "iOS Bootcamp ChallengeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C36BFB852700DCD100F8CCAC /* Debug */,
+				C36BFB862700DCD100F8CCAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C36BFB872700DCD100F8CCAC /* Build configuration list for PBXNativeTarget "iOS Bootcamp ChallengeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C36BFB882700DCD100F8CCAC /* Debug */,
+				C36BFB892700DCD100F8CCAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C36BFB602700DCCE00F8CCAC /* iOS_Bootcamp_Challenge.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C36BFB612700DCCE00F8CCAC /* iOS_Bootcamp_Challenge.xcdatamodel */,
+			);
+			currentVersion = C36BFB612700DCCE00F8CCAC /* iOS_Bootcamp_Challenge.xcdatamodel */;
+			path = iOS_Bootcamp_Challenge.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = C36BFB4C2700DCCE00F8CCAC /* Project object */;
+}
