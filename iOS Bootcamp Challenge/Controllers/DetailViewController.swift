@@ -8,8 +8,9 @@
 import UIKit
 
 class DetailViewController: UIViewController {
+
     static let segueIdentifier = "goDetailViewControllerSegue"
-    
+
     public var pokemon: Pokemon?
-    
+
 }

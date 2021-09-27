@@ -1,0 +1,8 @@
+line_length: 180
+
+identifier_name:
+  excluded: # excluded via string array
+    - id
+    - URL
+    - ok
+  reporter: "xcode"
