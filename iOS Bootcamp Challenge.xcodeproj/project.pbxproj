@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		C36BFB582700DCCE00F8CCAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BFB572700DCCE00F8CCAC /* AppDelegate.swift */; };
 		C36BFB5A2700DCCE00F8CCAC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BFB592700DCCE00F8CCAC /* SceneDelegate.swift */; };
-		C36BFB5C2700DCCE00F8CCAC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BFB5B2700DCCE00F8CCAC /* ViewController.swift */; };
 		C36BFB5F2700DCCE00F8CCAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C36BFB5D2700DCCE00F8CCAC /* Main.storyboard */; };
 		C36BFB622700DCCE00F8CCAC /* iOS_Bootcamp_Challenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C36BFB602700DCCE00F8CCAC /* iOS_Bootcamp_Challenge.xcdatamodeld */; };
 		C36BFB642700DCD000F8CCAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C36BFB632700DCD000F8CCAC /* Assets.xcassets */; };
@@ -17,6 +16,14 @@
 		C36BFB722700DCD100F8CCAC /* iOS_Bootcamp_ChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BFB712700DCD100F8CCAC /* iOS_Bootcamp_ChallengeTests.swift */; };
 		C36BFB7C2700DCD100F8CCAC /* iOS_Bootcamp_ChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BFB7B2700DCD100F8CCAC /* iOS_Bootcamp_ChallengeUITests.swift */; };
 		C36BFB7E2700DCD100F8CCAC /* iOS_Bootcamp_ChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BFB7D2700DCD100F8CCAC /* iOS_Bootcamp_ChallengeUITestsLaunchTests.swift */; };
+		C36BFB8B2700E14000F8CCAC /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BFB8A2700E14000F8CCAC /* Networking.swift */; };
+		C36BFB8D2700E6AE00F8CCAC /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BFB8C2700E6AE00F8CCAC /* ListViewController.swift */; };
+		C36BFB902700E8C300F8CCAC /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = C36BFB8F2700E8C300F8CCAC /* Kingfisher */; };
+		C36BFB922700ED8400F8CCAC /* PokeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BFB912700ED8400F8CCAC /* PokeCell.swift */; };
+		C36BFB952700EDD900F8CCAC /* ColumnFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BFB942700EDD900F8CCAC /* ColumnFlowLayout.swift */; };
+		C36BFB982700F07900F8CCAC /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BFB972700F07900F8CCAC /* Pokemon.swift */; };
+		C36BFB9A2700F1CE00F8CCAC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BFB992700F1CE00F8CCAC /* DetailViewController.swift */; };
+		C36BFB9E270102C900F8CCAC /* PokeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BFB9D270102C900F8CCAC /* PokeAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +47,6 @@
 		C36BFB542700DCCE00F8CCAC /* iOS Bootcamp Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Bootcamp Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C36BFB572700DCCE00F8CCAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C36BFB592700DCCE00F8CCAC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C36BFB5B2700DCCE00F8CCAC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C36BFB5E2700DCCE00F8CCAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C36BFB612700DCCE00F8CCAC /* iOS_Bootcamp_Challenge.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iOS_Bootcamp_Challenge.xcdatamodel; sourceTree = "<group>"; };
 		C36BFB632700DCD000F8CCAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +57,13 @@
 		C36BFB772700DCD100F8CCAC /* iOS Bootcamp ChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS Bootcamp ChallengeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C36BFB7B2700DCD100F8CCAC /* iOS_Bootcamp_ChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_Bootcamp_ChallengeUITests.swift; sourceTree = "<group>"; };
 		C36BFB7D2700DCD100F8CCAC /* iOS_Bootcamp_ChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_Bootcamp_ChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C36BFB8A2700E14000F8CCAC /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		C36BFB8C2700E6AE00F8CCAC /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		C36BFB912700ED8400F8CCAC /* PokeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeCell.swift; sourceTree = "<group>"; };
+		C36BFB942700EDD900F8CCAC /* ColumnFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnFlowLayout.swift; sourceTree = "<group>"; };
+		C36BFB972700F07900F8CCAC /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		C36BFB992700F1CE00F8CCAC /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		C36BFB9D270102C900F8CCAC /* PokeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C36BFB902700E8C300F8CCAC /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,10 +117,15 @@
 			children = (
 				C36BFB572700DCCE00F8CCAC /* AppDelegate.swift */,
 				C36BFB592700DCCE00F8CCAC /* SceneDelegate.swift */,
-				C36BFB5B2700DCCE00F8CCAC /* ViewController.swift */,
+				C36BFB9D270102C900F8CCAC /* PokeAPI.swift */,
+				C36BFB9C2700F30C00F8CCAC /* Controllers */,
+				C36BFB9B2700F2FC00F8CCAC /* Models */,
+				C36BFB962700EDF500F8CCAC /* Layouts */,
+				C36BFB932700EDAD00F8CCAC /* Cells */,
 				C36BFB5D2700DCCE00F8CCAC /* Main.storyboard */,
 				C36BFB632700DCD000F8CCAC /* Assets.xcassets */,
 				C36BFB652700DCD000F8CCAC /* LaunchScreen.storyboard */,
+				C36BFB8A2700E14000F8CCAC /* Networking.swift */,
 				C36BFB682700DCD000F8CCAC /* Info.plist */,
 				C36BFB602700DCCE00F8CCAC /* iOS_Bootcamp_Challenge.xcdatamodeld */,
 			);
@@ -130,6 +149,39 @@
 			path = "iOS Bootcamp ChallengeUITests";
 			sourceTree = "<group>";
 		};
+		C36BFB932700EDAD00F8CCAC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C36BFB912700ED8400F8CCAC /* PokeCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		C36BFB962700EDF500F8CCAC /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				C36BFB942700EDD900F8CCAC /* ColumnFlowLayout.swift */,
+			);
+			path = Layouts;
+			sourceTree = "<group>";
+		};
+		C36BFB9B2700F2FC00F8CCAC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C36BFB972700F07900F8CCAC /* Pokemon.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C36BFB9C2700F30C00F8CCAC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C36BFB8C2700E6AE00F8CCAC /* ListViewController.swift */,
+				C36BFB992700F1CE00F8CCAC /* DetailViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,6 +198,9 @@
 			dependencies = (
 			);
 			name = "iOS Bootcamp Challenge";
+			packageProductDependencies = (
+				C36BFB8F2700E8C300F8CCAC /* Kingfisher */,
+			);
 			productName = "iOS Bootcamp Challenge";
 			productReference = C36BFB542700DCCE00F8CCAC /* iOS Bootcamp Challenge.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +273,9 @@
 				Base,
 			);
 			mainGroup = C36BFB4B2700DCCE00F8CCAC;
+			packageReferences = (
+				C36BFB8E2700E8C300F8CCAC /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = C36BFB552700DCCE00F8CCAC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -261,10 +319,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C36BFB9A2700F1CE00F8CCAC /* DetailViewController.swift in Sources */,
+				C36BFB922700ED8400F8CCAC /* PokeCell.swift in Sources */,
+				C36BFB982700F07900F8CCAC /* Pokemon.swift in Sources */,
+				C36BFB952700EDD900F8CCAC /* ColumnFlowLayout.swift in Sources */,
 				C36BFB622700DCCE00F8CCAC /* iOS_Bootcamp_Challenge.xcdatamodeld in Sources */,
-				C36BFB5C2700DCCE00F8CCAC /* ViewController.swift in Sources */,
+				C36BFB9E270102C900F8CCAC /* PokeAPI.swift in Sources */,
+				C36BFB8B2700E14000F8CCAC /* Networking.swift in Sources */,
 				C36BFB582700DCCE00F8CCAC /* AppDelegate.swift in Sources */,
 				C36BFB5A2700DCCE00F8CCAC /* SceneDelegate.swift in Sources */,
+				C36BFB8D2700E6AE00F8CCAC /* ListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,7 +507,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3Z9GKK4827;
+				DEVELOPMENT_TEAM = 4H4MW5C45S;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS Bootcamp Challenge/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -456,7 +520,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.wizeline.bootcamp.iOS-Bootcamp-Challenge";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wizeline.bootcamp.bootcamp-challenge";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -471,7 +535,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3Z9GKK4827;
+				DEVELOPMENT_TEAM = 4H4MW5C45S;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS Bootcamp Challenge/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -484,7 +548,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.wizeline.bootcamp.iOS-Bootcamp-Challenge";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.wizeline.bootcamp.bootcamp-challenge";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -628,6 +692,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C36BFB8E2700E8C300F8CCAC /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = exactVersion;
+				version = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C36BFB8F2700E8C300F8CCAC /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C36BFB8E2700E8C300F8CCAC /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		C36BFB602700DCCE00F8CCAC /* iOS_Bootcamp_Challenge.xcdatamodeld */ = {
