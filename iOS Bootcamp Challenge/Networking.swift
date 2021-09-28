@@ -15,7 +15,7 @@ extension URLSession {
         guard let url = URL(string: url) else { return nil }
         return self.dataTask(with: URLRequest(url: url), completionHandler: completionHandler)
     }
-    
+
     func dataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
         return self.dataTask(with: URLRequest(url: url), completionHandler: completionHandler)
     }

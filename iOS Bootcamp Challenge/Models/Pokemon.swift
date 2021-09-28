@@ -7,13 +7,33 @@
 
 import Foundation
 
+// MARK: - Pokemon
+
+enum PokemonType: String, Decodable, CaseIterable, Identifiable {
+
+    var id: String { rawValue }
+
+    case fire = "Fire"
+    case grass = "Grass"
+    case water = "Water"
+    case poison = "Poison"
+    case flying = "Flying"
+    case electric = "Electric"
+    case bug = "Bug"
+    case normal = "Normal"
+    case fighting = "Fighting"
+    case ice = "Ice"
+    case ground = "Ground"
+
+}
+
 struct Pokemon: Decodable, Equatable {
 
     let id: Int
     let name: String
     let image: String?
     let types: [String]?
-    
+
     enum CodingKeys: String, CodingKey {
         case id
         case name
@@ -21,31 +41,54 @@ struct Pokemon: Decodable, Equatable {
         case type
         case types
         case sprites
-        case front_default
+        case other
+        case officialArtwork = "official-artwork"
+        case frontDefault = "front_default"
     }
-    
+
     static func decode(json: JSON?) -> Pokemon? {
-        guard let json = json else { return nil }
-        return try? JSONDecoder().decode(Pokemon.self, from: json.data)
+        guard let json = json, let data = json.data else { return nil }
+        return try? JSONDecoder().decode(Pokemon.self, from: data)
     }
-    
+
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         id = try container.decode(Int.self, forKey: .id)
         name = try container.decode(String.self, forKey: .name)
-        let image_container = try container.nestedContainer(keyedBy: CodingKeys.self, forKey: .sprites)
-        image = try? image_container.decode(String.self, forKey: .front_default)
-        
+        let sprites = try container.nestedContainer(keyedBy: CodingKeys.self, forKey: .sprites)
+        let other = try sprites.nestedContainer(keyedBy: CodingKeys.self, forKey: .other)
+        let officialArtWork = try other.nestedContainer(keyedBy: CodingKeys.self, forKey: .officialArtwork)
+        image = try? officialArtWork.decode(String.self, forKey: .frontDefault)
+
         // TODO: Decode list of types
-        
-        var types_array = try container.nestedUnkeyedContainer(forKey: .types)
-        var poke_types:[String] = []
-        while(!types_array.isAtEnd) {
-            let types_container = try types_array.nestedContainer(keyedBy: CodingKeys.self)
-            let type_container = try types_container.nestedContainer(keyedBy: CodingKeys.self, forKey: .type)
-            poke_types.append(try type_container.decode(String.self, forKey: .name))
+
+        var typesArray = try container.nestedUnkeyedContainer(forKey: .types)
+        var pokeTypes: [String] = []
+        while !typesArray.isAtEnd {
+            let typesContainer = try typesArray.nestedContainer(keyedBy: CodingKeys.self)
+            let typeContainer = try typesContainer.nestedContainer(keyedBy: CodingKeys.self, forKey: .type)
+            pokeTypes.append(try typeContainer.decode(String.self, forKey: .name))
         }
-        types = poke_types
+        types = pokeTypes
+    }
+
+}
+
+extension Pokemon {
+
+    func formattedNumber() -> String {
+        String(format: "#%03d", arguments: [id])
+    }
+
+    func primaryType() -> String? {
+        guard let primary = types?.first else { return nil }
+        return primary.capitalized
+    }
+
+    func secondaryType() -> String? {
+        let index = 1
+        guard index < types?.count ?? 0 else { return nil }
+        return types?[index].capitalized
     }
 
 }

@@ -7,15 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C56346D270273F700EB996C /* PokemonColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C56346C270273F700EB996C /* PokemonColor.swift */; };
 		C36BFB582700DCCE00F8CCAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BFB572700DCCE00F8CCAC /* AppDelegate.swift */; };
 		C36BFB5A2700DCCE00F8CCAC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BFB592700DCCE00F8CCAC /* SceneDelegate.swift */; };
 		C36BFB5F2700DCCE00F8CCAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C36BFB5D2700DCCE00F8CCAC /* Main.storyboard */; };
 		C36BFB622700DCCE00F8CCAC /* iOS_Bootcamp_Challenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C36BFB602700DCCE00F8CCAC /* iOS_Bootcamp_Challenge.xcdatamodeld */; };
 		C36BFB642700DCD000F8CCAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C36BFB632700DCD000F8CCAC /* Assets.xcassets */; };
 		C36BFB672700DCD000F8CCAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C36BFB652700DCD000F8CCAC /* LaunchScreen.storyboard */; };
-		C36BFB722700DCD100F8CCAC /* iOS_Bootcamp_ChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BFB712700DCD100F8CCAC /* iOS_Bootcamp_ChallengeTests.swift */; };
-		C36BFB7C2700DCD100F8CCAC /* iOS_Bootcamp_ChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BFB7B2700DCD100F8CCAC /* iOS_Bootcamp_ChallengeUITests.swift */; };
-		C36BFB7E2700DCD100F8CCAC /* iOS_Bootcamp_ChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BFB7D2700DCD100F8CCAC /* iOS_Bootcamp_ChallengeUITestsLaunchTests.swift */; };
+		C36BFB722700DCD100F8CCAC /* IOSBootcampChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BFB712700DCD100F8CCAC /* IOSBootcampChallengeTests.swift */; };
+		C36BFB7C2700DCD100F8CCAC /* IOSBootcampChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BFB7B2700DCD100F8CCAC /* IOSBootcampChallengeUITests.swift */; };
+		C36BFB7E2700DCD100F8CCAC /* IOSBootcampChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BFB7D2700DCD100F8CCAC /* IOSBootcampChallengeUITestsLaunchTests.swift */; };
 		C36BFB8B2700E14000F8CCAC /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BFB8A2700E14000F8CCAC /* Networking.swift */; };
 		C36BFB8D2700E6AE00F8CCAC /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BFB8C2700E6AE00F8CCAC /* ListViewController.swift */; };
 		C36BFB902700E8C300F8CCAC /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = C36BFB8F2700E8C300F8CCAC /* Kingfisher */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3C56346C270273F700EB996C /* PokemonColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonColor.swift; sourceTree = "<group>"; };
 		C36BFB542700DCCE00F8CCAC /* iOS Bootcamp Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Bootcamp Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C36BFB572700DCCE00F8CCAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C36BFB592700DCCE00F8CCAC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,10 +55,10 @@
 		C36BFB662700DCD000F8CCAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C36BFB682700DCD000F8CCAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C36BFB6D2700DCD100F8CCAC /* iOS Bootcamp ChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS Bootcamp ChallengeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C36BFB712700DCD100F8CCAC /* iOS_Bootcamp_ChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_Bootcamp_ChallengeTests.swift; sourceTree = "<group>"; };
+		C36BFB712700DCD100F8CCAC /* IOSBootcampChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSBootcampChallengeTests.swift; sourceTree = "<group>"; };
 		C36BFB772700DCD100F8CCAC /* iOS Bootcamp ChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS Bootcamp ChallengeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C36BFB7B2700DCD100F8CCAC /* iOS_Bootcamp_ChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_Bootcamp_ChallengeUITests.swift; sourceTree = "<group>"; };
-		C36BFB7D2700DCD100F8CCAC /* iOS_Bootcamp_ChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_Bootcamp_ChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C36BFB7B2700DCD100F8CCAC /* IOSBootcampChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSBootcampChallengeUITests.swift; sourceTree = "<group>"; };
+		C36BFB7D2700DCD100F8CCAC /* IOSBootcampChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSBootcampChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C36BFB8A2700E14000F8CCAC /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		C36BFB8C2700E6AE00F8CCAC /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		C36BFB912700ED8400F8CCAC /* PokeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeCell.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				C36BFB8A2700E14000F8CCAC /* Networking.swift */,
 				C36BFB682700DCD000F8CCAC /* Info.plist */,
 				C36BFB602700DCCE00F8CCAC /* iOS_Bootcamp_Challenge.xcdatamodeld */,
+				3C56346C270273F700EB996C /* PokemonColor.swift */,
 			);
 			path = "iOS Bootcamp Challenge";
 			sourceTree = "<group>";
@@ -135,7 +138,7 @@
 		C36BFB702700DCD100F8CCAC /* iOS Bootcamp ChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
-				C36BFB712700DCD100F8CCAC /* iOS_Bootcamp_ChallengeTests.swift */,
+				C36BFB712700DCD100F8CCAC /* IOSBootcampChallengeTests.swift */,
 			);
 			path = "iOS Bootcamp ChallengeTests";
 			sourceTree = "<group>";
@@ -143,8 +146,8 @@
 		C36BFB7A2700DCD100F8CCAC /* iOS Bootcamp ChallengeUITests */ = {
 			isa = PBXGroup;
 			children = (
-				C36BFB7B2700DCD100F8CCAC /* iOS_Bootcamp_ChallengeUITests.swift */,
-				C36BFB7D2700DCD100F8CCAC /* iOS_Bootcamp_ChallengeUITestsLaunchTests.swift */,
+				C36BFB7B2700DCD100F8CCAC /* IOSBootcampChallengeUITests.swift */,
+				C36BFB7D2700DCD100F8CCAC /* IOSBootcampChallengeUITestsLaunchTests.swift */,
 			);
 			path = "iOS Bootcamp ChallengeUITests";
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 				C36BFB502700DCCE00F8CCAC /* Sources */,
 				C36BFB512700DCCE00F8CCAC /* Frameworks */,
 				C36BFB522700DCCE00F8CCAC /* Resources */,
+				3C56346E27027BAF00EB996C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -314,6 +318,26 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3C56346E27027BAF00EB996C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C36BFB502700DCCE00F8CCAC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -327,6 +351,7 @@
 				C36BFB9E270102C900F8CCAC /* PokeAPI.swift in Sources */,
 				C36BFB8B2700E14000F8CCAC /* Networking.swift in Sources */,
 				C36BFB582700DCCE00F8CCAC /* AppDelegate.swift in Sources */,
+				3C56346D270273F700EB996C /* PokemonColor.swift in Sources */,
 				C36BFB5A2700DCCE00F8CCAC /* SceneDelegate.swift in Sources */,
 				C36BFB8D2700E6AE00F8CCAC /* ListViewController.swift in Sources */,
 			);
@@ -336,7 +361,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C36BFB722700DCD100F8CCAC /* iOS_Bootcamp_ChallengeTests.swift in Sources */,
+				C36BFB722700DCD100F8CCAC /* IOSBootcampChallengeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,8 +369,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C36BFB7C2700DCD100F8CCAC /* iOS_Bootcamp_ChallengeUITests.swift in Sources */,
-				C36BFB7E2700DCD100F8CCAC /* iOS_Bootcamp_ChallengeUITestsLaunchTests.swift in Sources */,
+				C36BFB7C2700DCD100F8CCAC /* IOSBootcampChallengeUITests.swift in Sources */,
+				C36BFB7E2700DCD100F8CCAC /* IOSBootcampChallengeUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,7 +8,7 @@
 import XCTest
 @testable import iOS_Bootcamp_Challenge
 
-class iOS_Bootcamp_ChallengeTests: XCTestCase {
+class IOSBootcampChallengeTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

@@ -7,18 +7,17 @@
 
 import Foundation
 
-typealias JSON = Dictionary<String, Any>
+typealias JSON = [String: Any]
 
 class PokeAPI {
-    
+
     static let shared = PokeAPI()
-    
-    static let base_url = "https://pokeapi.co/api/v2/"
-    
+    static let baseURL = "https://pokeapi.co/api/v2/"
+
     @discardableResult
     func get(url: String, onCompletion: @escaping(JSON?, Error?) -> Void) -> URLSessionDataTask? {
-        let path = url.replacingOccurrences(of: PokeAPI.base_url, with: "")
-        let task = URLSession.mock.dataTask(with: PokeAPI.base_url + path, completionHandler: { data, response, error in
+        let path = url.replacingOccurrences(of: PokeAPI.baseURL, with: "")
+        let task = URLSession.mock.dataTask(with: PokeAPI.baseURL + path, completionHandler: { data, _, error in
             guard let data = data else {
                 onCompletion(nil, error)
                 return
@@ -36,7 +35,7 @@ class PokeAPI {
 }
 
 extension JSON {
-    var data: Data {
-        try! JSONSerialization.data(withJSONObject: self, options: .fragmentsAllowed)
+    var data: Data? {
+        try? JSONSerialization.data(withJSONObject: self, options: .fragmentsAllowed)
     }
 }
