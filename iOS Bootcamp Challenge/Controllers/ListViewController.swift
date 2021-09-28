@@ -21,7 +21,11 @@ class ListViewController: UICollectionViewController, UISearchResultsUpdating {
     private var isFiltering: Bool {
       searchController.isActive && !isSearchBarEmpty
     }
-
+    
+    private var latestSearch: String? {
+        UserDefaults.standard.string(forKey: .searchText)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -41,18 +45,21 @@ class ListViewController: UICollectionViewController, UISearchResultsUpdating {
         navbar.titleTextAttributes = [.foregroundColor: UIColor.white]
         navbar.prefersLargeTitles = true
 
-        refresh()
-    }
-
-    private func setupUI() {
-
         // Set up the searchController parameters.
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Search a pokemon"
         searchController.searchBar.showsCancelButton = true
+        searchController.searchBar.text = latestSearch
         navigationItem.searchController = searchController
         definesPresentationContext = true
+        
+        refresh()
+    }
+
+    private func setupUI() {
+
+        
 
         // Set up the collection view.
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -70,6 +77,8 @@ class ListViewController: UICollectionViewController, UISearchResultsUpdating {
     // MARK: - UISearchViewController
 
     private func filterContentForSearchText(_ searchText: String) {
+        // store latest search
+        UserDefaults.standard.set(searchText, forKey: .searchText)
         // filter with a simple contains searched text
         resultPokemons = pokemons
             .filter {
@@ -158,4 +167,16 @@ class ListViewController: UICollectionViewController, UISearchResultsUpdating {
         updateSearchResults(for: searchController)
     }
 
+}
+
+extension UserDefaults {
+    enum Keys: String {
+        case searchText
+    }
+    func set(_ any: Any?, forKey key: UserDefaults.Keys) {
+        self.set(any, forKey: key.rawValue)
+    }
+    func string(forKey key: UserDefaults.Keys) -> String? {
+        self.string(forKey: key.rawValue)
+    }
 }
