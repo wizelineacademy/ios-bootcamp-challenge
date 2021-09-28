@@ -7,15 +7,13 @@
 
 import Foundation
 
-typealias JSON = [String: Any]
-
 class PokeAPI {
 
     static let shared = PokeAPI()
     static let baseURL = "https://pokeapi.co/api/v2/"
 
     @discardableResult
-    func get(url: String, onCompletion: @escaping(JSON?, Error?) -> Void) -> URLSessionDataTask? {
+    func get<T: Decodable>(url: String, onCompletion: @escaping(T?, Error?) -> Void) -> URLSessionDataTask? {
         let path = url.replacingOccurrences(of: PokeAPI.baseURL, with: "")
         let task = URLSession.mock.dataTask(with: PokeAPI.baseURL + path, completionHandler: { data, _, error in
             guard let data = data else {
@@ -23,19 +21,13 @@ class PokeAPI {
                 return
             }
             do {
-                let dic = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
-                onCompletion(dic, error)
+                let entity = try JSONDecoder().decode(T.self, from: data)
+                onCompletion(entity, error)
             } catch {
                 onCompletion(nil, error)
             }
         })
         task?.resume()
         return task
-    }
-}
-
-extension JSON {
-    var data: Data? {
-        try? JSONSerialization.data(withJSONObject: self, options: .fragmentsAllowed)
     }
 }

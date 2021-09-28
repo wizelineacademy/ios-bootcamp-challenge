@@ -46,19 +46,15 @@ struct Pokemon: Decodable, Equatable {
         case frontDefault = "front_default"
     }
 
-    static func decode(json: JSON?) -> Pokemon? {
-        guard let json = json, let data = json.data else { return nil }
-        return try? JSONDecoder().decode(Pokemon.self, from: data)
-    }
 
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        id = try container.decode(Int.self, forKey: .id)
+        self.id = try container.decode(Int.self, forKey: .id)
         name = try container.decode(String.self, forKey: .name)
         let sprites = try container.nestedContainer(keyedBy: CodingKeys.self, forKey: .sprites)
         let other = try sprites.nestedContainer(keyedBy: CodingKeys.self, forKey: .other)
         let officialArtWork = try other.nestedContainer(keyedBy: CodingKeys.self, forKey: .officialArtwork)
-        image = try? officialArtWork.decode(String.self, forKey: .frontDefault)
+        self.image = try? officialArtWork.decode(String.self, forKey: .frontDefault)
 
         // TODO: Decode list of types
 
@@ -69,7 +65,7 @@ struct Pokemon: Decodable, Equatable {
             let typeContainer = try typesContainer.nestedContainer(keyedBy: CodingKeys.self, forKey: .type)
             pokeTypes.append(try typeContainer.decode(String.self, forKey: .name))
         }
-        types = pokeTypes
+        self.types = pokeTypes
     }
 
 }
