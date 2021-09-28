@@ -21,11 +21,11 @@ class ListViewController: UICollectionViewController, UISearchResultsUpdating {
     private var isFiltering: Bool {
       searchController.isActive && !isSearchBarEmpty
     }
-    
+
     private var latestSearch: String? {
         UserDefaults.standard.string(forKey: .searchText)
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -53,12 +53,12 @@ class ListViewController: UICollectionViewController, UISearchResultsUpdating {
         searchController.searchBar.text = latestSearch
         navigationItem.searchController = searchController
         definesPresentationContext = true
-        
+
         refresh()
     }
 
     private func setupUI() {
-        
+
         // Set up the collection view.
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         collectionView.backgroundColor = .white
@@ -132,7 +132,7 @@ class ListViewController: UICollectionViewController, UISearchResultsUpdating {
 
         let group = DispatchGroup()
         group.enter()
-        PokeAPI.shared.get(url: "pokemon?limit=30", onCompletion: { (list: PokemonList?, error) in
+        PokeAPI.shared.get(url: "pokemon?limit=30", onCompletion: { (list: PokemonList?, _) in
             guard let list = list else { return }
             list.results.forEach { result in
                 group.enter()

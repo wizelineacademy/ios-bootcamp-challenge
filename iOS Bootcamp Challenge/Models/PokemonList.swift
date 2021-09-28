@@ -12,7 +12,7 @@ import Foundation
 struct PokemonItem: Decodable {
     let id: String
     let name: String
-    
+
     enum CodingKeys: String, CodingKey {
         case id
         case name
@@ -49,11 +49,11 @@ struct PokemonList: Decodable {
 extension String {
     func matches(_ pattern: String) -> [[String]] {
         let range = NSRange(self.startIndex..., in: self)
-        let regex = try! NSRegularExpression(pattern: pattern, options: [])
+        guard let regex = try? NSRegularExpression(pattern: pattern, options: []) else { return [] }
         let matches = regex.matches(in: self, options: [], range: range)
-        
+
         var groups: [[String]] = []
-        
+
         for match in matches {
             var subgroup: [String] = []
             // For each matched range, extract the capture group
