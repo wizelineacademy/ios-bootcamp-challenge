@@ -9,16 +9,16 @@ import UIKit
 
 class ListViewController: UICollectionViewController, UISearchResultsUpdating {
 
-    var pokemons: [Pokemon] = []
-    var resultPokemons: [Pokemon] = []
+    private var pokemons: [Pokemon] = []
+    private var resultPokemons: [Pokemon] = []
 
-    let searchController = UISearchController(searchResultsController: nil)
+    private let searchController = UISearchController(searchResultsController: nil)
 
-    var isSearchBarEmpty: Bool {
+    private var isSearchBarEmpty: Bool {
       searchController.searchBar.text?.isEmpty ?? true
     }
 
-    var isFiltering: Bool {
+    private var isFiltering: Bool {
       searchController.isActive && !isSearchBarEmpty
     }
 
@@ -31,7 +31,7 @@ class ListViewController: UICollectionViewController, UISearchResultsUpdating {
 
     // MARK: Setup
 
-    func setup() {
+    private func setup() {
         title = "Pokédex"
 
         // Customize navigation bar.
@@ -44,7 +44,7 @@ class ListViewController: UICollectionViewController, UISearchResultsUpdating {
         refresh()
     }
 
-    func setupUI() {
+    private func setupUI() {
 
         // Set up the searchController parameters.
         searchController.searchResultsUpdater = self
@@ -69,7 +69,7 @@ class ListViewController: UICollectionViewController, UISearchResultsUpdating {
 
     // MARK: - UISearchViewController
 
-    func filterContentForSearchText(_ searchText: String) {
+    private func filterContentForSearchText(_ searchText: String) {
         // filter with a simple contains searched text
         resultPokemons = pokemons
             .filter {
@@ -147,7 +147,7 @@ class ListViewController: UICollectionViewController, UISearchResultsUpdating {
         }
     }
 
-    func didRefresh() {
+    private func didRefresh() {
         guard
             let collectionView = collectionView,
             let refreshControl = collectionView.refreshControl

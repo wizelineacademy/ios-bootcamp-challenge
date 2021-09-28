@@ -11,7 +11,7 @@ import Kingfisher
 class PokeCell: UICollectionViewCell {
     static let identifier = "kPokeCollectionViewCell"
 
-    lazy var idLabel: UILabel = {
+    lazy private var idLabel: UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.font = .boldSystemFont(ofSize: 14)
@@ -19,7 +19,7 @@ class PokeCell: UICollectionViewCell {
         return view
     }()
 
-    lazy var nameLabel: UILabel = {
+    lazy private var nameLabel: UILabel = {
         let view = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.font = .boldSystemFont(ofSize: 18)
@@ -27,7 +27,7 @@ class PokeCell: UICollectionViewCell {
         return view
     }()
 
-    lazy var imageView: UIImageView = {
+    lazy private var imageView: UIImageView = {
         let view = UIImageView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.contentMode = .scaleAspectFit
@@ -43,7 +43,7 @@ class PokeCell: UICollectionViewCell {
         return view
     }()
 
-    var gradient: CAGradientLayer?
+    private var gradient: CAGradientLayer?
 
     // general margin for ui elements
     private let margin: CGFloat = 10
@@ -63,7 +63,7 @@ class PokeCell: UICollectionViewCell {
         setupUI()
     }
 
-    func setupUI() {
+    private func setupUI() {
         addSubview(backgroundBall)
         backgroundBall.topAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         backgroundBall.leftAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
