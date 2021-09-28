@@ -58,9 +58,7 @@ class ListViewController: UICollectionViewController, UISearchResultsUpdating {
     }
 
     private func setupUI() {
-
         
-
         // Set up the collection view.
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         collectionView.backgroundColor = .white
@@ -130,19 +128,16 @@ class ListViewController: UICollectionViewController, UISearchResultsUpdating {
     @objc func refresh() {
         var pokemons: [Pokemon] = []
 
-        // TODO: Wait for all requests to update the collection view
+        // TODO: Wait for all requests to finish before updating the collection view
 
         let group = DispatchGroup()
         group.enter()
-        PokeAPI.shared.get(url: "pokemon?limit=30", onCompletion: { dic, _ in
-            guard let results = dic?["results"] as? [JSON] else { return }
-
-            results.forEach { json in
-                guard let url = json["url"] as? String else { return }
-
+        PokeAPI.shared.get(url: "pokemon?limit=30", onCompletion: { (list: PokemonList?, error) in
+            guard let list = list else { return }
+            list.results.forEach { result in
                 group.enter()
-                PokeAPI.shared.get(url: url, onCompletion: { dic, _ in
-                    guard let pokemon = Pokemon.decode(json: dic) else { return }
+                PokeAPI.shared.get(url: "/pokemon/\(result.id)/", onCompletion: { (pokemon: Pokemon?, _) in
+                    guard let pokemon = pokemon else { return }
                     pokemons.append(pokemon)
                     group.leave()
                 })
