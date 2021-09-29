@@ -62,14 +62,6 @@ class DetailViewController: UIViewController {
         return view
     }()
 
-    lazy private var backgroundBall: UIImageView = {
-        let view = UIImageView(image: UIImage(named: "PokeBall"))
-        view.contentMode = .scaleAspectFill
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.alpha = 0.3
-        return view
-    }()
-
     lazy private var cardView: CardView = {
         let title = "About"
         let cardView = CardView(card: Card(title: title, items: items))
@@ -154,15 +146,9 @@ class DetailViewController: UIViewController {
 
         view.addSubview(imageView)
         imageView.bottomAnchor.constraint(equalTo: cardView.topAnchor, constant: margin * 2).isActive = true
+        imageView.centerXAnchor.constraint(equalTo: cardView.centerXAnchor).isActive = true
         imageView.heightAnchor.constraint(equalToConstant: 200).isActive = true
         imageView.widthAnchor.constraint(equalToConstant: 200).isActive = true
-        imageView.leftAnchor.constraint(equalTo: cardView.centerXAnchor, constant: -100).isActive = true
-
-        view.addSubview(backgroundBall)
-        backgroundBall.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: -150).isActive = true
-        backgroundBall.heightAnchor.constraint(equalToConstant: 150).isActive = true
-        backgroundBall.widthAnchor.constraint(equalToConstant: 150).isActive = true
-        backgroundBall.rightAnchor.constraint(equalTo: cardView.rightAnchor).isActive = true
     }
 
     private func buildTypes(_ types: [String]) {

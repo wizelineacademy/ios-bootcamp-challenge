@@ -62,12 +62,12 @@ class PokeCell: UICollectionViewCell {
         return view
     }()
 
-    private var gradient: CAGradientLayer? {
-        guard let pokemon = pokemon else { return nil }
-        let gradient = PokemonColor.typeLinearGradient(name: pokemon.primaryType())
-        gradient.frame = bounds
-        return gradient
-    }
+    // view containing gradients
+    lazy private var gradientView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
 
     // general margin for ui elements
     private let margin: CGFloat = 10
@@ -82,17 +82,23 @@ class PokeCell: UICollectionViewCell {
     }
 
     private func setupUI() {
+
         addSubview(backgroundBall)
+        addSubview(gradientView)
+        addSubview(idLabel)
+        addSubview(nameLabel)
+        addSubview(imageView)
+        addSubview(typesContainer)
 
         backgroundBall.topAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         backgroundBall.leftAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         backgroundBall.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         backgroundBall.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
 
-        addSubview(idLabel)
-        addSubview(nameLabel)
-        addSubview(imageView)
-        addSubview(typesContainer)
+        gradientView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
+        gradientView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
+        gradientView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        gradientView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
 
         idLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: margin).isActive = true
         idLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: margin).isActive = true
@@ -119,7 +125,7 @@ class PokeCell: UICollectionViewCell {
         idLabel.text = nil
         nameLabel.text = nil
         imageView.image = nil
-        gradient?.removeFromSuperlayer()
+        gradientView.layer.sublayers?.forEach { $0.removeFromSuperlayer() }
         typesContainer.subviews.forEach { $0.removeFromSuperview() }
     }
 
@@ -146,8 +152,9 @@ class PokeCell: UICollectionViewCell {
                 view.bottomAnchor.constraint(equalTo: typesContainer.bottomAnchor).isActive = true
             }
 
-            guard let gradient = gradient else { return }
-            contentView.layer.insertSublayer(gradient, at: 0)
+            let gradient = PokemonColor.typeLinearGradient(name: pokemon.primaryType())
+            gradient.frame = bounds
+            gradientView.layer.insertSublayer(gradient, at: 0)
         }
     }
 }
