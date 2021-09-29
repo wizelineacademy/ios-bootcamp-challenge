@@ -62,29 +62,11 @@ struct Pokemon: Decodable, Equatable {
         let officialArtWork = try other.nestedContainer(keyedBy: CodingKeys.self, forKey: .officialArtwork)
         self.image = try? officialArtWork.decode(String.self, forKey: .frontDefault)
 
-        // TODO: Decode list of types
+        // TODO: Decode list of types & abilities
 
-        var typesArray = try container.nestedUnkeyedContainer(forKey: .types)
-        var pokeTypes: [String] = []
+        self.types = []
+        self.abilities = []
 
-        while !typesArray.isAtEnd {
-            let typesContainer = try typesArray.nestedContainer(keyedBy: CodingKeys.self)
-            let typeContainer = try typesContainer.nestedContainer(keyedBy: CodingKeys.self, forKey: .type)
-            pokeTypes.append(try typeContainer.decode(String.self, forKey: .name))
-        }
-
-        self.types = pokeTypes
-
-        var abilitiesArray = try container.nestedUnkeyedContainer(forKey: .abilities)
-        var pokeAbilities: [String] = []
-
-        while !abilitiesArray.isAtEnd {
-            let abilitiesContainer = try abilitiesArray.nestedContainer(keyedBy: CodingKeys.self)
-            let abilityContainer = try abilitiesContainer.nestedContainer(keyedBy: CodingKeys.self, forKey: .ability)
-            pokeAbilities.append(try abilityContainer.decode(String.self, forKey: .name).capitalized)
-        }
-
-        self.abilities = pokeAbilities
         self.weight = try container.decode(Float.self, forKey: .weight)
         self.baseExperience = try container.decode(Int.self, forKey: .baseExperience)
     }

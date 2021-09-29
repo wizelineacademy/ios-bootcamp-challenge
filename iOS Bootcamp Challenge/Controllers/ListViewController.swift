@@ -15,9 +15,7 @@ class ListViewController: UICollectionViewController, SearchBarDelegate {
 
     // TODO: Use UserDefaults to pre-load the latest search at start
 
-    private var latestSearch: String? {
-        UserDefaults.standard.string(forKey: .searchText)
-    }
+    private var latestSearch: String?
 
     lazy private var searchController: SearchBar = {
         let searchController = SearchBar("Search a pokemon", delegate: self)
@@ -28,16 +26,9 @@ class ListViewController: UICollectionViewController, SearchBarDelegate {
 
     private var isFirstLauch: Bool = true
 
-    private var shouldShowLoader: Bool = false {
-        didSet {
-            if shouldShowLoader {
-                SVProgressHUD.shouldShowLoader(isFirstLauch)
-            } else {
-                isFirstLauch = false
-                SVProgressHUD.shouldShowLoader(false)
-            }
-        }
-    }
+    // TODO: Add a loading indicator when the app first launches and has no pokemons
+    private var shouldShowLoader: Bool = true
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -82,8 +73,6 @@ class ListViewController: UICollectionViewController, SearchBarDelegate {
     // MARK: - UISearchViewController
 
     private func filterContentForSearchText(_ searchText: String) {
-        // store latest search
-        UserDefaults.standard.set(searchText, forKey: .searchText)
         // filter with a simple contains searched text
         resultPokemons = pokemons
             .filter {
@@ -122,22 +111,9 @@ class ListViewController: UICollectionViewController, SearchBarDelegate {
         return cell
     }
 
-    // MARK: - Segue Management
+    // MARK: - Navigation
 
     // TODO: Handle navigation to detail view controller
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let detailViewController = segue.destination as? DetailViewController else {
-            fatalError()
-        }
-
-        if segue.identifier == DetailViewController.segueIdentifier {
-            if let indexPaths = collectionView.indexPathsForSelectedItems {
-                let indexPath = indexPaths[0]
-                detailViewController.pokemon = resultPokemons[indexPath.row]
-            }
-        }
-    }
 
     // MARK: - UI Hooks
 
@@ -148,32 +124,17 @@ class ListViewController: UICollectionViewController, SearchBarDelegate {
 
         // TODO: Wait for all requests to finish before updating the collection view
 
-        let group = DispatchGroup()
-        group.enter()
-
         PokeAPI.shared.get(url: "pokemon?limit=30", onCompletion: { (list: PokemonList?, _) in
-            guard let list = list else {
-                group.leave()
-                return
-            }
+            guard let list = list else { return }
             list.results.forEach { result in
-                group.enter()
                 PokeAPI.shared.get(url: "/pokemon/\(result.id)/", onCompletion: { (pokemon: Pokemon?, _) in
-                    guard let pokemon = pokemon else {
-                        group.leave()
-                        return
-                    }
+                    guard let pokemon = pokemon else { return }
                     pokemons.append(pokemon)
-                    group.leave()
+                    self.pokemons = pokemons
+                    self.didRefresh()
                 })
             }
-            group.leave()
         })
-
-        group.notify(queue: .main) {
-            self.pokemons = pokemons
-            self.didRefresh()
-        }
     }
 
     private func didRefresh() {
