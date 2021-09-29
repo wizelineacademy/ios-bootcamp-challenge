@@ -49,7 +49,7 @@ class CardView: UIView {
         titleLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: margin).isActive = true
         titleLabel.widthAnchor.constraint(lessThanOrEqualTo: self.widthAnchor, multiplier: 0.70).isActive = true
 
-        // TODO: Display pokemon stats
+        // TODO: Display pokemon info (eg. types, abilities)
     }
 
 }

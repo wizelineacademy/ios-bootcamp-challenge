@@ -14,9 +14,15 @@ The topics covered by the challenge are:
 The `ListViewController` contains a collections of `PokeCells` which will display a list of Pokemons
 to the user. You'll need to handle the `PokeApi` to retrieve each Pokemon details.
 
+    // TODO: Implements generics to merge this methods into one
+    // TODO: Decode list of types & abilities
+
+
 ### Concurrency
 Requests in the project take different times to return data! Make sure you are finish downloading
 all pokemons before updating the `CollectionView`
+
+    // TODO: Wait for all requests to finish before updating the collection view
 
 
 ### Patterns and Architecture
@@ -27,13 +33,23 @@ to allow the user search and select a Pokemon from the `ListViewController` to d
 
 You can encapsulate your components in the same file or create more files in the project.
 
+    // TODO: Handle navigation to detail view controller
+
+    
 ### Views & Layouts
 Let's display the Pokemons details like the image, type and attacks. What ever you wanna display 
 We provided a start ui using Layout Constraints in the code, but feel free to use Frames or the Storyboard!
 
+    // TODO: Display pokemon info (eg. types, abilities)
+
+
 #### Extras
 If you have time left address the extra TODO's inside the project to show off your skill!
 
+    // TODO: Use UserDefaults to pre-load the latest search at start
+    // TODO: Add a loading indicator when the app first launches and has no pokemons
+
+    
 ## Code Review Process
 
 You'll receive this challenge as a zip file, with no git repo available. To start solving
