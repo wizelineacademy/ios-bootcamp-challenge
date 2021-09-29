@@ -62,6 +62,7 @@ class DetailViewController: UIViewController {
         return view
     }()
 
+    // TODO: Display pokemon stats
     lazy private var cardView: CardView = {
         let title = "About"
         let cardView = CardView(card: Card(title: title, items: items))

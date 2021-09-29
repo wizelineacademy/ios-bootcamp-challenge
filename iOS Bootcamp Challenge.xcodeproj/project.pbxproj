@@ -33,8 +33,8 @@
 		C36BFB982700F07900F8CCAC /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BFB972700F07900F8CCAC /* Pokemon.swift */; };
 		C36BFB9A2700F1CE00F8CCAC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BFB992700F1CE00F8CCAC /* DetailViewController.swift */; };
 		C36BFB9E270102C900F8CCAC /* PokeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BFB9D270102C900F8CCAC /* PokeAPI.swift */; };
-		C38493B62704B78A00386A1B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C38493B52704B78A00386A1B /* README.md */; };
 		C38493B42704A85E00386A1B /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38493B32704A85E00386A1B /* SearchBar.swift */; };
+		C38493B62704B78A00386A1B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C38493B52704B78A00386A1B /* README.md */; };
 		C3C4F9182702D65300136BFB /* PokemonList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C4F9172702D65300136BFB /* PokemonList.swift */; };
 /* End PBXBuildFile section */
 
@@ -98,8 +98,8 @@
 		C36BFB972700F07900F8CCAC /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		C36BFB992700F1CE00F8CCAC /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		C36BFB9D270102C900F8CCAC /* PokeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeAPI.swift; sourceTree = "<group>"; };
-		C38493B52704B78A00386A1B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C38493B32704A85E00386A1B /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		C38493B52704B78A00386A1B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C3C4F9172702D65300136BFB /* PokemonList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -639,7 +639,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -669,7 +669,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
