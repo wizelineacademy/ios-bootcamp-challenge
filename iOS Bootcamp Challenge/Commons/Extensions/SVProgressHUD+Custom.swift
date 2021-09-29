@@ -10,8 +10,7 @@ import SVProgressHUD
 
 extension SVProgressHUD {
 
-    static func shouldShowLoader(_ shouldShow: Bool?) {
-        guard let shouldShow = shouldShow else { return }
+    static func shouldShowLoader(_ shouldShow: Bool) {
         shouldShow ? SVProgressHUD.show() : SVProgressHUD.dismiss()
     }
 
