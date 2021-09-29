@@ -138,13 +138,19 @@ class ListViewController: UICollectionViewController, UISearchResultsUpdating {
         let group = DispatchGroup()
         group.enter()
         SVProgressHUD.shouldShowLoader(isFirstLauch)
-        
+
         PokeAPI.shared.get(url: "pokemon?limit=30", onCompletion: { (list: PokemonList?, _) in
-            guard let list = list else { return }
+            guard let list = list else {
+                group.leave()
+                return
+            }
             list.results.forEach { result in
                 group.enter()
                 PokeAPI.shared.get(url: "/pokemon/\(result.id)/", onCompletion: { (pokemon: Pokemon?, _) in
-                    guard let pokemon = pokemon else { return }
+                    guard let pokemon = pokemon else {
+                        group.leave()
+                        return
+                    }
                     pokemons.append(pokemon)
                     group.leave()
                 })
