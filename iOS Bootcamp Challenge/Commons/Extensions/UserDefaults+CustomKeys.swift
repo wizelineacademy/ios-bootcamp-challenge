@@ -11,7 +11,6 @@ extension UserDefaults {
 
     enum Keys: String {
         case searchText
-        case firstLaunch
     }
 
     func set(_ any: Any?, forKey key: UserDefaults.Keys) {

@@ -8,29 +8,36 @@
 import UIKit
 import SVProgressHUD
 
-class ListViewController: UICollectionViewController, UISearchResultsUpdating {
+class ListViewController: UICollectionViewController, SearchBarDelegate {
 
     private var pokemons: [Pokemon] = []
     private var resultPokemons: [Pokemon] = []
 
-    private let searchController = UISearchController(searchResultsController: nil)
-
-    private var isSearchBarEmpty: Bool {
-      searchController.searchBar.text?.isEmpty ?? true
-    }
-
-    private var isFiltering: Bool {
-      searchController.isActive && !isSearchBarEmpty
-    }
+    // TODO: Use UserDefaults to pre-load the latest search at start
 
     private var latestSearch: String? {
         UserDefaults.standard.string(forKey: .searchText)
     }
 
-    private var isFirstLauch: Bool? {
-        UserDefaults.standard.bool(forKey: .firstLaunch)
-    }
+    lazy private var searchController: SearchBar = {
+        let searchController = SearchBar("Search a pokemon", delegate: self)
+        searchController.text = latestSearch
+        searchController.showsCancelButton = !searchController.isSearchBarEmpty
+        return searchController
+    }()
 
+    private var isFirstLauch: Bool = true
+
+    private var shouldShowLoader: Bool = false {
+        didSet {
+            if shouldShowLoader {
+                SVProgressHUD.shouldShowLoader(isFirstLauch)
+            } else {
+                isFirstLauch = false
+                SVProgressHUD.shouldShowLoader(false)
+            }
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -46,16 +53,11 @@ class ListViewController: UICollectionViewController, UISearchResultsUpdating {
         // Customize navigation bar.
         guard let navbar = self.navigationController?.navigationBar else { return }
 
-        navbar.tintColor = .blue.withAlphaComponent(0.6)
-        navbar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        navbar.tintColor = .black
+        navbar.titleTextAttributes = [.foregroundColor: UIColor.black]
         navbar.prefersLargeTitles = true
 
         // Set up the searchController parameters.
-        searchController.searchResultsUpdater = self
-        searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Search a pokemon"
-        searchController.searchBar.showsCancelButton = true
-        searchController.searchBar.text = latestSearch
         navigationItem.searchController = searchController
         definesPresentationContext = true
 
@@ -94,9 +96,16 @@ class ListViewController: UICollectionViewController, UISearchResultsUpdating {
         collectionView.reloadData()
     }
 
-    func updateSearchResults(for searchController: UISearchController) {
-        guard let searchText = searchController.searchBar.text else { return }
-        filterContentForSearchText(searchText)
+    func updateSearchResults(for text: String) {
+        filterContentForSearchText(text)
+    }
+
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searchController.showsCancelButton = true
+    }
+
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        searchController.showsCancelButton = !searchController.isSearchBarEmpty
     }
 
     // MARK: - UICollectionViewDataSource
@@ -115,6 +124,8 @@ class ListViewController: UICollectionViewController, UISearchResultsUpdating {
 
     // MARK: - Segue Management
 
+    // TODO: Handle navigation to detail view controller
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let detailViewController = segue.destination as? DetailViewController else {
             fatalError()
@@ -131,13 +142,14 @@ class ListViewController: UICollectionViewController, UISearchResultsUpdating {
     // MARK: - UI Hooks
 
     @objc func refresh() {
+        shouldShowLoader = true
+
         var pokemons: [Pokemon] = []
 
         // TODO: Wait for all requests to finish before updating the collection view
 
         let group = DispatchGroup()
         group.enter()
-        SVProgressHUD.shouldShowLoader(isFirstLauch)
 
         PokeAPI.shared.get(url: "pokemon?limit=30", onCompletion: { (list: PokemonList?, _) in
             guard let list = list else {
@@ -159,14 +171,14 @@ class ListViewController: UICollectionViewController, UISearchResultsUpdating {
         })
 
         group.notify(queue: .main) {
-            UserDefaults.standard.set(false, forKey: .firstLaunch)
-            SVProgressHUD.shouldShowLoader(self.isFirstLauch)
             self.pokemons = pokemons
             self.didRefresh()
         }
     }
 
     private func didRefresh() {
+        shouldShowLoader = false
+
         guard
             let collectionView = collectionView,
             let refreshControl = collectionView.refreshControl
@@ -174,7 +186,7 @@ class ListViewController: UICollectionViewController, UISearchResultsUpdating {
 
         refreshControl.endRefreshing()
 
-        updateSearchResults(for: searchController)
+        updateSearchResults(for: searchController.text ??  "")
     }
 
 }
