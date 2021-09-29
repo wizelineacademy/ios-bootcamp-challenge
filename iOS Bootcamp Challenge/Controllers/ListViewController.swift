@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class ListViewController: UICollectionViewController, UISearchResultsUpdating {
 
@@ -21,11 +22,15 @@ class ListViewController: UICollectionViewController, UISearchResultsUpdating {
     private var isFiltering: Bool {
       searchController.isActive && !isSearchBarEmpty
     }
-    
+
     private var latestSearch: String? {
         UserDefaults.standard.string(forKey: .searchText)
     }
-    
+
+    private var isFirstLauch: Bool? {
+        UserDefaults.standard.bool(forKey: .firstLaunch)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -53,12 +58,12 @@ class ListViewController: UICollectionViewController, UISearchResultsUpdating {
         searchController.searchBar.text = latestSearch
         navigationItem.searchController = searchController
         definesPresentationContext = true
-        
+
         refresh()
     }
 
     private func setupUI() {
-        
+
         // Set up the collection view.
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         collectionView.backgroundColor = .white
@@ -132,7 +137,9 @@ class ListViewController: UICollectionViewController, UISearchResultsUpdating {
 
         let group = DispatchGroup()
         group.enter()
-        PokeAPI.shared.get(url: "pokemon?limit=30", onCompletion: { (list: PokemonList?, error) in
+        SVProgressHUD.shouldShowLoader(isFirstLauch)
+        
+        PokeAPI.shared.get(url: "pokemon?limit=30", onCompletion: { (list: PokemonList?, _) in
             guard let list = list else { return }
             list.results.forEach { result in
                 group.enter()
@@ -146,6 +153,8 @@ class ListViewController: UICollectionViewController, UISearchResultsUpdating {
         })
 
         group.notify(queue: .main) {
+            UserDefaults.standard.set(false, forKey: .firstLaunch)
+            SVProgressHUD.shouldShowLoader(self.isFirstLauch)
             self.pokemons = pokemons
             self.didRefresh()
         }
@@ -162,16 +171,4 @@ class ListViewController: UICollectionViewController, UISearchResultsUpdating {
         updateSearchResults(for: searchController)
     }
 
-}
-
-extension UserDefaults {
-    enum Keys: String {
-        case searchText
-    }
-    func set(_ any: Any?, forKey key: UserDefaults.Keys) {
-        self.set(any, forKey: key.rawValue)
-    }
-    func string(forKey key: UserDefaults.Keys) -> String? {
-        self.string(forKey: key.rawValue)
-    }
 }

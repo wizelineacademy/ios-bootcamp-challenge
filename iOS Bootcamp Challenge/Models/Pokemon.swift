@@ -33,6 +33,9 @@ struct Pokemon: Decodable, Equatable {
     let name: String
     let image: String?
     let types: [String]?
+    let abilities: [String]?
+    let weight: Float
+    let baseExperience: Int
 
     enum CodingKeys: String, CodingKey {
         case id
@@ -44,8 +47,11 @@ struct Pokemon: Decodable, Equatable {
         case other
         case officialArtwork = "official-artwork"
         case frontDefault = "front_default"
+        case abilities
+        case ability
+        case weight
+        case baseExperience = "base_experience"
     }
-
 
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
@@ -60,12 +66,27 @@ struct Pokemon: Decodable, Equatable {
 
         var typesArray = try container.nestedUnkeyedContainer(forKey: .types)
         var pokeTypes: [String] = []
+
         while !typesArray.isAtEnd {
             let typesContainer = try typesArray.nestedContainer(keyedBy: CodingKeys.self)
             let typeContainer = try typesContainer.nestedContainer(keyedBy: CodingKeys.self, forKey: .type)
             pokeTypes.append(try typeContainer.decode(String.self, forKey: .name))
         }
+
         self.types = pokeTypes
+
+        var abilitiesArray = try container.nestedUnkeyedContainer(forKey: .abilities)
+        var pokeAbilities: [String] = []
+
+        while !abilitiesArray.isAtEnd {
+            let abilitiesContainer = try abilitiesArray.nestedContainer(keyedBy: CodingKeys.self)
+            let abilityContainer = try abilitiesContainer.nestedContainer(keyedBy: CodingKeys.self, forKey: .ability)
+            pokeAbilities.append(try abilityContainer.decode(String.self, forKey: .name).capitalized)
+        }
+
+        self.abilities = pokeAbilities
+        self.weight = try container.decode(Float.self, forKey: .weight)
+        self.baseExperience = try container.decode(Int.self, forKey: .baseExperience)
     }
 
 }

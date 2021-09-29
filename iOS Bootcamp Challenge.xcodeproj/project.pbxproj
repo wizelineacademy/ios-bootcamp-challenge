@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		3C56346D270273F700EB996C /* PokemonColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C56346C270273F700EB996C /* PokemonColor.swift */; };
+		3C563471270397F300EB996C /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C563470270397F300EB996C /* CardView.swift */; };
+		3C5634732703981E00EB996C /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5634722703981E00EB996C /* ItemView.swift */; };
+		3C5634752703A68600EB996C /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5634742703A68600EB996C /* Item.swift */; };
+		3C5634772703B4A500EB996C /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5634762703B4A500EB996C /* Card.swift */; };
+		3C56347A270415F800EB996C /* SVProgressHUD.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C563479270415F800EB996C /* SVProgressHUD.xcframework */; };
+		3C56347B270415F800EB996C /* SVProgressHUD.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3C563479270415F800EB996C /* SVProgressHUD.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3C56348027041BBB00EB996C /* UserDefaults+CustomKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C56347F27041BBB00EB996C /* UserDefaults+CustomKeys.swift */; };
+		3C56348227041C2500EB996C /* SVProgressHUD+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C56348127041C2500EB996C /* SVProgressHUD+Custom.swift */; };
 		C36BFB582700DCCE00F8CCAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BFB572700DCCE00F8CCAC /* AppDelegate.swift */; };
 		C36BFB5A2700DCCE00F8CCAC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BFB592700DCCE00F8CCAC /* SceneDelegate.swift */; };
 		C36BFB5F2700DCCE00F8CCAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C36BFB5D2700DCCE00F8CCAC /* Main.storyboard */; };
@@ -45,8 +53,29 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		3C56347C270415F800EB996C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3C56347B270415F800EB996C /* SVProgressHUD.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		3C56346C270273F700EB996C /* PokemonColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonColor.swift; sourceTree = "<group>"; };
+		3C563470270397F300EB996C /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		3C5634722703981E00EB996C /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
+		3C5634742703A68600EB996C /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		3C5634762703B4A500EB996C /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		3C563479270415F800EB996C /* SVProgressHUD.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SVProgressHUD.xcframework; path = Carthage/Build/SVProgressHUD.xcframework; sourceTree = "<group>"; };
+		3C56347F27041BBB00EB996C /* UserDefaults+CustomKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+CustomKeys.swift"; sourceTree = "<group>"; };
+		3C56348127041C2500EB996C /* SVProgressHUD+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SVProgressHUD+Custom.swift"; sourceTree = "<group>"; };
 		C36BFB542700DCCE00F8CCAC /* iOS Bootcamp Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Bootcamp Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C36BFB572700DCCE00F8CCAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C36BFB592700DCCE00F8CCAC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +105,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C36BFB902700E8C300F8CCAC /* Kingfisher in Frameworks */,
+				3C56347A270415F800EB996C /* SVProgressHUD.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +126,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C56346F270397E100EB996C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3C563470270397F300EB996C /* CardView.swift */,
+				3C5634722703981E00EB996C /* ItemView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3C563478270415F800EB996C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3C563479270415F800EB996C /* SVProgressHUD.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3C56347D27041B1C00EB996C /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				3C56347E27041B6D00EB996C /* Extensions */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		3C56347E27041B6D00EB996C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3C56347F27041BBB00EB996C /* UserDefaults+CustomKeys.swift */,
+				3C56348127041C2500EB996C /* SVProgressHUD+Custom.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		C36BFB4B2700DCCE00F8CCAC = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +167,7 @@
 				C36BFB702700DCD100F8CCAC /* iOS Bootcamp ChallengeTests */,
 				C36BFB7A2700DCD100F8CCAC /* iOS Bootcamp ChallengeUITests */,
 				C36BFB552700DCCE00F8CCAC /* Products */,
+				3C563478270415F800EB996C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,6 +184,8 @@
 		C36BFB562700DCCE00F8CCAC /* iOS Bootcamp Challenge */ = {
 			isa = PBXGroup;
 			children = (
+				3C56347D27041B1C00EB996C /* Commons */,
+				3C56346F270397E100EB996C /* Views */,
 				C36BFB572700DCCE00F8CCAC /* AppDelegate.swift */,
 				C36BFB592700DCCE00F8CCAC /* SceneDelegate.swift */,
 				C36BFB9D270102C900F8CCAC /* PokeAPI.swift */,
@@ -175,6 +242,8 @@
 			children = (
 				C3C4F9172702D65300136BFB /* PokemonList.swift */,
 				C36BFB972700F07900F8CCAC /* Pokemon.swift */,
+				3C5634742703A68600EB996C /* Item.swift */,
+				3C5634762703B4A500EB996C /* Card.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -199,6 +268,7 @@
 				C36BFB512700DCCE00F8CCAC /* Frameworks */,
 				C36BFB522700DCCE00F8CCAC /* Resources */,
 				3C56346E27027BAF00EB996C /* ShellScript */,
+				3C56347C270415F800EB996C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -348,16 +418,22 @@
 			files = (
 				C36BFB9A2700F1CE00F8CCAC /* DetailViewController.swift in Sources */,
 				C36BFB922700ED8400F8CCAC /* PokeCell.swift in Sources */,
+				3C56348227041C2500EB996C /* SVProgressHUD+Custom.swift in Sources */,
 				C36BFB982700F07900F8CCAC /* Pokemon.swift in Sources */,
 				C36BFB952700EDD900F8CCAC /* ColumnFlowLayout.swift in Sources */,
 				C3C4F9182702D65300136BFB /* PokemonList.swift in Sources */,
 				C36BFB622700DCCE00F8CCAC /* iOS_Bootcamp_Challenge.xcdatamodeld in Sources */,
 				C36BFB9E270102C900F8CCAC /* PokeAPI.swift in Sources */,
+				3C563471270397F300EB996C /* CardView.swift in Sources */,
 				C36BFB8B2700E14000F8CCAC /* Networking.swift in Sources */,
 				C36BFB582700DCCE00F8CCAC /* AppDelegate.swift in Sources */,
+				3C5634752703A68600EB996C /* Item.swift in Sources */,
 				3C56346D270273F700EB996C /* PokemonColor.swift in Sources */,
+				3C5634732703981E00EB996C /* ItemView.swift in Sources */,
+				3C56348027041BBB00EB996C /* UserDefaults+CustomKeys.swift in Sources */,
 				C36BFB5A2700DCCE00F8CCAC /* SceneDelegate.swift in Sources */,
 				C36BFB8D2700E6AE00F8CCAC /* ListViewController.swift in Sources */,
+				3C5634772703B4A500EB996C /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
