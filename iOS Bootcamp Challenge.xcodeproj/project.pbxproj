@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		3C56346D270273F700EB996C /* PokemonColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C56346C270273F700EB996C /* PokemonColor.swift */; };
+		3C563471270397F300EB996C /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C563470270397F300EB996C /* CardView.swift */; };
+		3C5634732703981E00EB996C /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5634722703981E00EB996C /* ItemView.swift */; };
+		3C5634752703A68600EB996C /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5634742703A68600EB996C /* Item.swift */; };
+		3C5634772703B4A500EB996C /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5634762703B4A500EB996C /* Card.swift */; };
 		C36BFB582700DCCE00F8CCAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BFB572700DCCE00F8CCAC /* AppDelegate.swift */; };
 		C36BFB5A2700DCCE00F8CCAC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BFB592700DCCE00F8CCAC /* SceneDelegate.swift */; };
 		C36BFB5F2700DCCE00F8CCAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C36BFB5D2700DCCE00F8CCAC /* Main.storyboard */; };
@@ -47,6 +51,10 @@
 
 /* Begin PBXFileReference section */
 		3C56346C270273F700EB996C /* PokemonColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonColor.swift; sourceTree = "<group>"; };
+		3C563470270397F300EB996C /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		3C5634722703981E00EB996C /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
+		3C5634742703A68600EB996C /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		3C5634762703B4A500EB996C /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		C36BFB542700DCCE00F8CCAC /* iOS Bootcamp Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Bootcamp Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C36BFB572700DCCE00F8CCAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C36BFB592700DCCE00F8CCAC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +104,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C56346F270397E100EB996C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3C563470270397F300EB996C /* CardView.swift */,
+				3C5634722703981E00EB996C /* ItemView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		C36BFB4B2700DCCE00F8CCAC = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +136,7 @@
 		C36BFB562700DCCE00F8CCAC /* iOS Bootcamp Challenge */ = {
 			isa = PBXGroup;
 			children = (
+				3C56346F270397E100EB996C /* Views */,
 				C36BFB572700DCCE00F8CCAC /* AppDelegate.swift */,
 				C36BFB592700DCCE00F8CCAC /* SceneDelegate.swift */,
 				C36BFB9D270102C900F8CCAC /* PokeAPI.swift */,
@@ -175,6 +193,8 @@
 			children = (
 				C3C4F9172702D65300136BFB /* PokemonList.swift */,
 				C36BFB972700F07900F8CCAC /* Pokemon.swift */,
+				3C5634742703A68600EB996C /* Item.swift */,
+				3C5634762703B4A500EB996C /* Card.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -353,11 +373,15 @@
 				C3C4F9182702D65300136BFB /* PokemonList.swift in Sources */,
 				C36BFB622700DCCE00F8CCAC /* iOS_Bootcamp_Challenge.xcdatamodeld in Sources */,
 				C36BFB9E270102C900F8CCAC /* PokeAPI.swift in Sources */,
+				3C563471270397F300EB996C /* CardView.swift in Sources */,
 				C36BFB8B2700E14000F8CCAC /* Networking.swift in Sources */,
 				C36BFB582700DCCE00F8CCAC /* AppDelegate.swift in Sources */,
+				3C5634752703A68600EB996C /* Item.swift in Sources */,
 				3C56346D270273F700EB996C /* PokemonColor.swift in Sources */,
+				3C5634732703981E00EB996C /* ItemView.swift in Sources */,
 				C36BFB5A2700DCCE00F8CCAC /* SceneDelegate.swift in Sources */,
 				C36BFB8D2700E6AE00F8CCAC /* ListViewController.swift in Sources */,
+				3C5634772703B4A500EB996C /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

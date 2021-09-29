@@ -77,9 +77,7 @@ class PokeCell: UICollectionViewCell {
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        backgroundColor = .blue.withAlphaComponent(0.3)
         layer.cornerRadius = 16
-
         setupUI()
     }
 

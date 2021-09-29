@@ -55,6 +55,52 @@ class DetailViewController: UIViewController {
         return stackView
     }()
 
+    lazy private var imageView: UIImageView = {
+        let view = UIImageView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.contentMode = .scaleAspectFit
+        return view
+    }()
+
+    lazy private var backgroundBall: UIImageView = {
+        let view = UIImageView(image: UIImage(named: "PokeBall"))
+        view.contentMode = .scaleAspectFill
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.alpha = 0.3
+        return view
+    }()
+
+    lazy private var cardView: CardView = {
+        let title = "About"
+        let cardView = CardView(card: Card(title: title, items: items))
+        cardView.translatesAutoresizingMaskIntoConstraints = false
+        return cardView
+    }()
+
+    lazy private var items: [Item] = {
+        var items = [Item]()
+
+        guard let pokemon = pokemon else { return items }
+
+        // abilities
+        if let abilities = pokemon.abilities {
+            let title = "Abilities"
+            let description = abilities.joined(separator: "\n")
+            let item = Item(title: title, description: description)
+            items.append(item)
+        }
+
+        // weight
+        let weight = "Weight"
+        items.append(Item(title: weight, description: "\(pokemon.weight/10) kg"))
+
+        // baseExperience
+        let baseExperience = "Base Experience"
+        items.append(Item(title: baseExperience, description: "\(pokemon.baseExperience)"))
+
+        return items
+    }()
+
     @objc private func closeButton(sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
@@ -72,6 +118,10 @@ class DetailViewController: UIViewController {
 
         guard let gradient = gradient else { return }
         view.layer.insertSublayer(gradient, at: 0)
+
+        if let image = pokemon.image, let url = URL(string: image) {
+            imageView.kf.setImage(with: url)
+        }
 
         guard let types = pokemon.types else { return }
         buildTypes(types)
@@ -95,6 +145,24 @@ class DetailViewController: UIViewController {
         typesStackView.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: margin).isActive = true
         typesStackView.leftAnchor.constraint(equalTo: closeButon.leftAnchor).isActive = true
         typesStackView.widthAnchor.constraint(lessThanOrEqualTo: view.widthAnchor, multiplier: 0.7).isActive = true
+
+        view.addSubview(cardView)
+        cardView.topAnchor.constraint(equalTo: view.topAnchor, constant: view.frame.size.height/2.5).isActive = true
+        cardView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        cardView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        cardView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+
+        view.addSubview(imageView)
+        imageView.bottomAnchor.constraint(equalTo: cardView.topAnchor, constant: margin * 2).isActive = true
+        imageView.heightAnchor.constraint(equalToConstant: 200).isActive = true
+        imageView.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        imageView.leftAnchor.constraint(equalTo: cardView.centerXAnchor, constant: -100).isActive = true
+
+        view.addSubview(backgroundBall)
+        backgroundBall.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: -150).isActive = true
+        backgroundBall.heightAnchor.constraint(equalToConstant: 150).isActive = true
+        backgroundBall.widthAnchor.constraint(equalToConstant: 150).isActive = true
+        backgroundBall.rightAnchor.constraint(equalTo: cardView.rightAnchor).isActive = true
     }
 
     private func buildTypes(_ types: [String]) {
