@@ -1,4 +1,4 @@
-### iOS Bootcamp Challenge
+## iOS Bootcamp Challenge
 
 This is a challenge to be solved in order to be an attendee in the Wizeline
 Academy's iOS Bootcamp! But don't worry, you won't face some complex algorithms nor
@@ -9,17 +9,17 @@ What we have here is a little Pokedex app (which uses the famous [PokeAPI](https
 
 The topics covered by the challenge are:
 
-- Networking & Data
+### Networking & Data
  
 The `ListViewController` contains a collections of `PokeCells` which will display a list of Pokemons
 to the user. You'll need to handle the `PokeApi` to retrieve each Pokemon details.
 
-- Concurrency
+### Concurrency
 Requests in the project take different times to return data! Make sure you are finish downloading
 all pokemons before updating the `CollectionView`
 
 
-- Patterns and Architecture
+### Patterns and Architecture
 
 To display more info about a Pokemon we provided a `SearchBar` and `DetailViewController` objects, 
 however they are not in used yet! You need to implement them and handle the navigation 
@@ -27,11 +27,11 @@ to allow the user search and select a Pokemon from the `ListViewController` to d
 
 You can encapsulate your components in the same file or create more files in the project.
 
-- Views & Layouts
+### Views & Layouts
 Let's display the Pokemons details like the image, type and attacks. What ever you wanna display 
 We provided a start ui using Layout Constraints in the code, but feel free to use Frames or the Storyboard!
 
-- Extras
+#### Extras
 If you have time left address the extra TODO's inside the project to show off your skill!
 
 ## Code Review Process
