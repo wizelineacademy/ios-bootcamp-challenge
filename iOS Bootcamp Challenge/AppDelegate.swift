@@ -7,13 +7,19 @@
 
 import UIKit
 import CoreData
+import SVProgressHUD
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    var window: UIWindow?
+
     // swiftlint:disable line_length
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        window = UIWindow(frame: UIScreen.main.bounds)
+        SVProgressHUD.setDefaultMaskType(.black)
+        UserDefaults.standard.set(true, forKey: .firstLaunch)
         return true
     }
 

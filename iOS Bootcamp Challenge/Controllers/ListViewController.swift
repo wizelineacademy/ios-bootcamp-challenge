@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class ListViewController: UICollectionViewController, UISearchResultsUpdating {
 
@@ -24,6 +25,10 @@ class ListViewController: UICollectionViewController, UISearchResultsUpdating {
 
     private var latestSearch: String? {
         UserDefaults.standard.string(forKey: .searchText)
+    }
+
+    private var isFirstLauch: Bool? {
+        UserDefaults.standard.bool(forKey: .firstLaunch)
     }
 
     override func viewDidLoad() {
@@ -132,6 +137,8 @@ class ListViewController: UICollectionViewController, UISearchResultsUpdating {
 
         let group = DispatchGroup()
         group.enter()
+        SVProgressHUD.shouldShowLoader(isFirstLauch)
+        
         PokeAPI.shared.get(url: "pokemon?limit=30", onCompletion: { (list: PokemonList?, _) in
             guard let list = list else { return }
             list.results.forEach { result in
@@ -146,6 +153,8 @@ class ListViewController: UICollectionViewController, UISearchResultsUpdating {
         })
 
         group.notify(queue: .main) {
+            UserDefaults.standard.set(false, forKey: .firstLaunch)
+            SVProgressHUD.shouldShowLoader(self.isFirstLauch)
             self.pokemons = pokemons
             self.didRefresh()
         }
@@ -162,16 +171,4 @@ class ListViewController: UICollectionViewController, UISearchResultsUpdating {
         updateSearchResults(for: searchController)
     }
 
-}
-
-extension UserDefaults {
-    enum Keys: String {
-        case searchText
-    }
-    func set(_ any: Any?, forKey key: UserDefaults.Keys) {
-        self.set(any, forKey: key.rawValue)
-    }
-    func string(forKey key: UserDefaults.Keys) -> String? {
-        self.string(forKey: key.rawValue)
-    }
 }
