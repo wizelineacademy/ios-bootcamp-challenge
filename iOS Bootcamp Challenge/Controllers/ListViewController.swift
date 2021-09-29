@@ -13,7 +13,7 @@ class ListViewController: UICollectionViewController, SearchBarDelegate {
     private var pokemons: [Pokemon] = []
     private var resultPokemons: [Pokemon] = []
 
-    // TODO: Use UserDefaults to preload the latest search at start
+    // TODO: Use UserDefaults to pre-load the latest search at start
 
     private var latestSearch: String? {
         UserDefaults.standard.string(forKey: .searchText)

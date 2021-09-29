@@ -152,6 +152,7 @@
 			children = (
 				3C56347E27041B6D00EB996C /* Extensions */,
 				C38493B32704A85E00386A1B /* SearchBar.swift */,
+				3C56346C270273F700EB996C /* PokemonColor.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -205,7 +206,6 @@
 				C36BFB8A2700E14000F8CCAC /* Networking.swift */,
 				C36BFB682700DCD000F8CCAC /* Info.plist */,
 				C36BFB602700DCCE00F8CCAC /* iOS_Bootcamp_Challenge.xcdatamodeld */,
-				3C56346C270273F700EB996C /* PokemonColor.swift */,
 			);
 			path = "iOS Bootcamp Challenge";
 			sourceTree = "<group>";

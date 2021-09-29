@@ -13,7 +13,8 @@ protocol SearchBarDelegate: AnyObject {
     func updateSearchResults(for text: String)
 }
 
-protocol SearchBarProtocol {
+protocol SearchBarProtocol: UISearchBarDelegate & UISearchResultsUpdating {
+
     var text: String? { get set }
 
     var isSearchBarEmpty: Bool { get }
@@ -23,7 +24,7 @@ protocol SearchBarProtocol {
     var showsCancelButton: Bool { get set }
 }
 
-class SearchBar: UISearchController, UISearchBarDelegate, UISearchResultsUpdating {
+class SearchBar: UISearchController, SearchBarProtocol {
 
     private weak var searchBarDelegate: SearchBarDelegate?
 
