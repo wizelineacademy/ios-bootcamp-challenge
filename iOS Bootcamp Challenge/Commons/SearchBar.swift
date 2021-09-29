@@ -51,7 +51,7 @@ class SearchBar: UISearchController, SearchBarProtocol {
         }
     }
 
-    init(_ placeholder: String?, delegate: SearchBarDelegate) {
+    init(_ placeholder: String?, delegate: SearchBarDelegate?) {
         self.searchBarDelegate = delegate
         super.init(searchResultsController: nil)
         self.obscuresBackgroundDuringPresentation = false
@@ -66,10 +66,12 @@ class SearchBar: UISearchController, SearchBarProtocol {
     }
 
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        showsCancelButton = true
         searchBarDelegate?.searchBarTextDidBeginEditing(searchBar)
     }
 
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        showsCancelButton = !isSearchBarEmpty
         searchBarDelegate?.searchBarTextDidEndEditing(searchBar)
     }
 

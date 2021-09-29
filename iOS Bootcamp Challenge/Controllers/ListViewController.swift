@@ -8,7 +8,7 @@
 import UIKit
 import SVProgressHUD
 
-class ListViewController: UICollectionViewController, SearchBarDelegate {
+class ListViewController: UICollectionViewController {
 
     private var pokemons: [Pokemon] = []
     private var resultPokemons: [Pokemon] = []
@@ -18,7 +18,7 @@ class ListViewController: UICollectionViewController, SearchBarDelegate {
     private var latestSearch: String?
 
     lazy private var searchController: SearchBar = {
-        let searchController = SearchBar("Search a pokemon", delegate: self)
+        let searchController = SearchBar("Search a pokemon", delegate: nil)
         searchController.text = latestSearch
         searchController.showsCancelButton = !searchController.isSearchBarEmpty
         return searchController
@@ -27,6 +27,7 @@ class ListViewController: UICollectionViewController, SearchBarDelegate {
     private var isFirstLauch: Bool = true
 
     // TODO: Add a loading indicator when the app first launches and has no pokemons
+
     private var shouldShowLoader: Bool = true
 
     override func viewDidLoad() {
@@ -85,17 +86,7 @@ class ListViewController: UICollectionViewController, SearchBarDelegate {
         collectionView.reloadData()
     }
 
-    func updateSearchResults(for text: String) {
-        filterContentForSearchText(text)
-    }
-
-    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-        searchController.showsCancelButton = true
-    }
-
-    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-        searchController.showsCancelButton = !searchController.isSearchBarEmpty
-    }
+    // TODO: Implement the SearchBar
 
     // MARK: - UICollectionViewDataSource
 
@@ -147,7 +138,7 @@ class ListViewController: UICollectionViewController, SearchBarDelegate {
 
         refreshControl.endRefreshing()
 
-        updateSearchResults(for: searchController.text ??  "")
+        filterContentForSearchText("")
     }
 
 }
