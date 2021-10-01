@@ -57,4 +57,4 @@ To get started follow the next steps:
 1. [Fork this](https://github.com/wizelineacademy/ios-bootcamp-challenge) repository to your local machine
 3. Solve the challenges, creating a commit for every exercise.
 3. After you complete the challenges, upload your changes to github.
-4. Please fill out [this Google Form](https://forms.gle/hjXBhbPQqf9efJH66) for the iOS Bootcamp
+4. Please fill out [this Google Form](https://forms.gle/h2NZ2mFeVRAM914t8) for the iOS Bootcamp
