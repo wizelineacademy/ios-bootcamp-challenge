@@ -25,7 +25,7 @@ class ListViewController: UICollectionViewController {
 
     private var isFirstLauch: Bool = true
 
-    // TODO: Add a loading indicator when the app first launches and has no pokemons
+    var progressView: UIProgressView!
 
     private var shouldShowLoader: Bool = true
 
@@ -51,6 +51,16 @@ class ListViewController: UICollectionViewController {
         // Set up the searchController parameters.
         navigationItem.searchController = searchController
         definesPresentationContext = true
+        
+        // Set up the progress view
+        progressView = UIProgressView(progressViewStyle: .default)
+        progressView.sizeToFit()
+        let progressButton = UIBarButtonItem(customView: progressView)
+        toolbarItems = [progressButton]
+        navigationController?.isToolbarHidden = false
+        
+        // Search controller
+        searchController.searchResultsUpdater = self
 
         refresh()
     }
@@ -84,8 +94,6 @@ class ListViewController: UICollectionViewController {
 
         collectionView.reloadData()
     }
-
-    // TODO: Implement the SearchBar
 
     // MARK: - UICollectionViewDataSource
 
@@ -144,4 +152,11 @@ class ListViewController: UICollectionViewController {
         filterContentForSearchText("")
     }
 
+}
+
+extension ListViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        let searchBar = searchController.searchBar
+        filterContentForSearchText(searchBar.text!)
+    }
 }
