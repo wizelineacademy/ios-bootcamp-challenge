@@ -9,7 +9,6 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
-    static let segueIdentifier = "goDetailViewControllerSegue"
     private let margin: CGFloat = 20
 
     private var gradient: CAGradientLayer? {

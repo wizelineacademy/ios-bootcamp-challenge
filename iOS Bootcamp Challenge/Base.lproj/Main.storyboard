@@ -26,9 +26,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </collectionViewCellContentView>
-                                <connections>
-                                    <segue destination="hta-OE-VYE" kind="presentation" identifier="goDetailViewControllerSegue" id="X9f-eo-c84"/>
-                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -47,7 +44,7 @@
             <objects>
                 <viewController id="hta-OE-VYE" customClass="DetailViewController" customModule="iOS_Bootcamp_Challenge" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P9H-G3-H8u">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="CUV-dm-0NS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

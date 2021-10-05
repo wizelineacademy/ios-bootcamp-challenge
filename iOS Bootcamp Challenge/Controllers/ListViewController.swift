@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SVProgressHUD
 
 class ListViewController: UICollectionViewController {
 
@@ -104,7 +103,11 @@ class ListViewController: UICollectionViewController {
 
     // MARK: - Navigation
 
-    // TODO: Handle navigation to detail view controller
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let detailPokemonViewController = DetailViewController()
+        detailPokemonViewController.pokemon = resultPokemons[indexPath.item]
+        present(detailPokemonViewController, animated: true)
+    }
 
     // MARK: - UI Hooks
 
