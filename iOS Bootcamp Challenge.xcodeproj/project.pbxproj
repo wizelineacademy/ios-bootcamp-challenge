@@ -12,8 +12,6 @@
 		3C5634732703981E00EB996C /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5634722703981E00EB996C /* ItemView.swift */; };
 		3C5634752703A68600EB996C /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5634742703A68600EB996C /* Item.swift */; };
 		3C5634772703B4A500EB996C /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5634762703B4A500EB996C /* Card.swift */; };
-		3C56347A270415F800EB996C /* SVProgressHUD.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C563479270415F800EB996C /* SVProgressHUD.xcframework */; };
-		3C56347B270415F800EB996C /* SVProgressHUD.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3C563479270415F800EB996C /* SVProgressHUD.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3C56348027041BBB00EB996C /* UserDefaults+CustomKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C56347F27041BBB00EB996C /* UserDefaults+CustomKeys.swift */; };
 		C36BFB582700DCCE00F8CCAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BFB572700DCCE00F8CCAC /* AppDelegate.swift */; };
 		C36BFB5A2700DCCE00F8CCAC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36BFB592700DCCE00F8CCAC /* SceneDelegate.swift */; };
@@ -54,20 +52,6 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		3C56347C270415F800EB996C /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				3C56347B270415F800EB996C /* SVProgressHUD.xcframework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		3C56346C270273F700EB996C /* PokemonColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonColor.swift; sourceTree = "<group>"; };
 		3C563470270397F300EB996C /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
@@ -107,7 +91,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C36BFB902700E8C300F8CCAC /* Kingfisher in Frameworks */,
-				3C56347A270415F800EB996C /* SVProgressHUD.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,7 +254,6 @@
 				C36BFB512700DCCE00F8CCAC /* Frameworks */,
 				C36BFB522700DCCE00F8CCAC /* Resources */,
 				3C56346E27027BAF00EB996C /* ShellScript */,
-				3C56347C270415F800EB996C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
