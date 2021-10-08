@@ -115,17 +115,19 @@ class ListViewController: UICollectionViewController {
 
         // TODO: Wait for all requests to finish before updating the collection view
 
-        PokeAPI.shared.get(url: "pokemon?limit=30", onCompletion: { (list: PokemonList?, _) in
-            guard let list = list else { return }
-            list.results.forEach { result in
-                PokeAPI.shared.get(url: "/pokemon/\(result.id)/", onCompletion: { (pokemon: Pokemon?, _) in
-                    guard let pokemon = pokemon else { return }
-                    pokemons.append(pokemon)
-                    self.pokemons = pokemons
-                    self.didRefresh()
-                })
+        DispatchQueue.main.sync {
+            PokeAPI.shared.get(url: "pokemon?limit=30") { [weak self] list, _ in
+                guard let list = list else { return }
+                    list.results.forEach { result in
+                        PokeAPI.shared.get(url: "/pokemon/\(result.id)/") { [weak self] pokemon, _ in
+                            guard let pokemon = pokemon else { return }
+                            pokemons.append(pokemon)
+                            self?.pokemons = pokemons
+                        }
+                    }
+                }
             }
-        })
+        self.didRefresh()
     }
 
     private func didRefresh() {
