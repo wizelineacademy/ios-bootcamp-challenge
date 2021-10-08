@@ -105,6 +105,10 @@ class ListViewController: UICollectionViewController {
     // MARK: - Navigation
 
     // TODO: Handle navigation to detail view controller
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+      //let detailVC = DetailViewController(coder: )
+      //self.navigationController?.pushViewController(detalVC, animated: true)
+    }
 
     // MARK: - UI Hooks
 
